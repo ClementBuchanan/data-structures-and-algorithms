@@ -15,7 +15,7 @@ With responsive design websites continually and fluidly change based on differen
 
 - Mobile generally means to build a separate website commonly on a new domain solely for mobile users.
 
-[](images/responsive-web-design.jpg)
+[Responsive Web Design](images/responsive-web-design.jpg)
 
 ### Flexible Layouts
 
@@ -31,7 +31,7 @@ _target ÷ context =  result_
 _This is taking the target width of the element, divide it by the width of its parent element. The result is the relative width of the target element._
 
 
-### Flexibl Media
+### Flexible Media
 
 As viewports begin to change size media doesn’t always follow suit. Images, videos, and other media types need to be scalable, changing their size as the size of the viewport changes.
 
@@ -56,4 +56,4 @@ Floats can be used to create webpage layouts.
 
 Here's a example of a webpage with and w/o float properties:
 
-[](images/float.png)
+[Float image](images/float.png)
