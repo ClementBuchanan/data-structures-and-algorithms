@@ -15,7 +15,7 @@ With responsive design websites continually and fluidly change based on differen
 
 - Mobile generally means to build a separate website commonly on a new domain solely for mobile users.
 
-[Responsive Web Design](images/responsive-web-design.jpg)
+![Responsive Web Design](images/responsive-web-design.jpg)
 
 ### Flexible Layouts
 
@@ -56,4 +56,4 @@ Floats can be used to create webpage layouts.
 
 Here's a example of a webpage with and w/o float properties:
 
-[Float image](images/float.png)
+![Float image](images/float.png)
