@@ -9,7 +9,7 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  return word.toUpperCase();
 };
 
 const speaker = (message, callback) => {
@@ -59,7 +59,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  const outputList = [];
+  availableItems.forEach(fruitObject => {
+    if (fruitObject.available === true) {
+      outputList.push(fruitObject.name);
+    }
+  });
+  return outputList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -77,7 +83,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  const outputArray = [];
+  const fizzcallback = (number, Index, Array) => {
+    if (number % 3 === 0) {
+      outputArray.push('Fizz');
+    } else if (number % 5 === 0) {
+      outputArray.push('Buzz');
+    } else if () {
+      outputArray.push('Fizz Buzz');
+    } else {
+      outputArray.push(number);
+    }
+  };
+  arr.forEach(fizzcallback);
+  return outputArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
