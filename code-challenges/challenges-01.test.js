@@ -11,11 +11,9 @@ Then, write a function named speaker that takes in a string and a callback funct
 const greeting = (word) => {
   return word.toUpperCase();
 };
-// expect(speaker('hello 301 students!', greeting)).
+
 const speaker = (message, callback) => {
-  // message ==='hello 301 students!'
-  // callback === greeting
-  return callback(message);
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,13 +33,11 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  function callback(arr, addNumbers) {
-  }
-  return callback();
+  // Solution code here...
 };
-// expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
+
 const addNumbers = (num, arr, times, callback) => {
-  
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,12 +60,12 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   const outputList = [];
-  availableItems.forEach(xfruitObject => {
-    // for each takes a function as its parameter
-    if(fruitObject.available === true) {
+  availableItems.forEach(fruitObject => {
+    if (fruitObject.available === true) {
       outputList.push(fruitObject.name);
     }
   });
+  return outputList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,18 +84,18 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   const outputArray = [];
-  console.log(arr);
-  const fizzCallback = (number, index, array) => {
-    if(number % 3 === 0 && number % 5 === 0) {
-      outputArray.push('Fizz Buzz');
-    } else if (number % 3 === 0) {
-      outputArray.push('Fizz'); 
+  const fizzcallback = (number, Index, Array) => {
+    if (number % 3 === 0) {
+      outputArray.push('Fizz');
     } else if (number % 5 === 0) {
       outputArray.push('Buzz');
-    } else outputArray.push(number);
+    } else if () {
+      outputArray.push('Fizz Buzz');
+    } else {
+      outputArray.push(number);
     }
   };
-  arr.forEach(fizzCallBack);
+  arr.forEach(fizzcallback);
   return outputArray;
 };
 
