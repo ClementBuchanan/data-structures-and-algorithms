@@ -25,7 +25,22 @@ const createServer = () => {
   const express = require('express');
   const app = express();
 
+  // constructor function
+
+  function mapCurrentEvents(obj) {
+    this.author = obj.author;
+    this.category = obj.category;
+    this.description = obj.description;
+    this.id = obj.id;
+    this.image = obj.image;
+    this.language = obj.language;
+    this.published = obj.published;
+    this.title = obj.title;
+    this.url = obj.url;
+  
   // Routes go here
+  app.get('/events', (req, res) => getCurentEvents(req, res));
+  
   // Solution code here...
 
   var server = app.listen(3301, function () {
@@ -160,28 +175,28 @@ const currentEvents = {
 }
 
 function getCurrentEvents(request, response) {
-  // result.map(req, res => {
+  result.map(req, res => {
   
-// }
+}
 
-// const mapCurrentEvents = () => {
-//   function events (array, callback){
-//     const newArray = [];
-//     }
-//     return newArray;
-//   }
-// };
+const mapCurrentEvents = () => {
+  function events (array, callback){
+    const newArray = [];
+    }
+    return newArray;
+  }
+};
 
-// function Event(obj) {
-//   this.author = obj.author;
-//   this.categories = obj.categories;;
-//   this.summary = obj.summary;
-//   this.img_url = obj.img_url;
-//   this.date = obj.date;
-//   this.title = obj.title;
+function Event(obj) {
+  this.author = obj.author;
+  this.categories = obj.categories;;
+  this.summary = obj.summary;
+  this.img_url = obj.img_url;
+  this.date = obj.date;
+  this.title = obj.title;
 
-//   res.send(newEvent);
-// };
+  res.send(newEvent);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -426,7 +441,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-09.test.js
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should return an array of object instances with a key of author', () => {
     expect(mapCurrentEvents()[0].author).toStrictEqual("go");
   });
