@@ -1,6 +1,6 @@
 # Table of Contents for Code 301
 1. [Introduction](#introduction)
-1. [Responsive Web Designs and Floats](#Responsive-web-designs-and-floats)
+1. [Reading-01: Responsive Web Designs and Floats](#Responsive-web-designs-and-floats)
 1. [Another paragraph](#paragraph2)
   1. [Sub paragraph](#sub-paragraph)
 
