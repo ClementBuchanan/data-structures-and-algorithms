@@ -20,7 +20,7 @@ const $ = createSnippetWithJQuery(`
 `);
 
 const fixTheTypo = () => {
-// Solution code here...
+  $('.pear').text('Pear');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,7 +32,12 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  // Solution code here...
+  const letters = [];
+  for (let i = 0; i < arr.length; i++) {
+    letters.push(arr[i][0]);
+  }
+
+  return letters;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,7 +49,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  const smiley = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].includes(':)')) {
+      smiley.push(arr[i]);
+    }
+  }
+  return smiley;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,7 +79,11 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  let empty = '';
+  for(let i=1; i < str.length; i += 2 ){
+    empty += str[i];
+  }
+  return empty;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -205,7 +220,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should only return the odd indexed characters from the string', () => {
     expect(onlyOddChars('0123456789')).toStrictEqual('13579');
     expect(onlyOddChars('abcd')).toStrictEqual('bd');
@@ -295,6 +310,6 @@ xdescribe('Testing challenge 11', () => {
   });
 });
 
-function createSnippetWithJQuery(html){
+function createSnippetWithJQuery(html) {
   return cheerio.load(html);
 }
