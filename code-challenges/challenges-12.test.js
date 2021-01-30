@@ -9,8 +9,13 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  maxInArray.reduce(function(accu, val, index, arr){}
-    return accu = accu + val;
+  return arr.reduce((acc, cur) => {
+    if (cur > acc){
+      acc = cur;
+      return acc;
+    } else {
+      return acc;
+    }
   });
 };
 
@@ -37,8 +42,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let food = [];
+  for(let i=0; i < hoursOpen.length; i++){
+    let cumHours = 0;
+    for (let k=0; k < stores.length; k++){
+      cumHours += stores[k][i];
+    }
+    food.push(cumHours);
+  }
+  return food;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,7 +64,15 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let cookies = []
+  for(let i=0; i < hours.length; i++){
+    let stores = {
+      sales:`${data[i]} cookies`,
+      time:hours[i]
+    };
+    cookies.push(stores);
+  }
+  return cookies;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -77,7 +97,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -182,7 +202,7 @@ Run your tests from the console: jest challenge-12.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
+xdescribe('Testing challenge 1', () => {
   test('It should return the maximum number found', () => {
     expect(maxInArray([4, 2, 7, 5, 9, 2])).toStrictEqual(9);
   });
@@ -218,7 +238,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return the number 24', () => {
     expect(howManyTreats(errands)).toStrictEqual(24);
   });
