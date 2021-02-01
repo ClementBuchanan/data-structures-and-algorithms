@@ -174,9 +174,9 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   const reduction = arr.reduce(acc => {
-    acc += 1
-    return acc
-  }, 0)
+    acc += 1;
+    return acc;
+  }, 0);
   return reduction;
 };
 
