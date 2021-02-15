@@ -29,7 +29,7 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 const sortBackwards = (arr) => {
   arr.sort((first, second) => {
-    if (second < first) {
+    if (first > second) {
       return -1;
     } else if (first < second) {
       return 1;
@@ -91,9 +91,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
- arr.sort => {
-
- }
+ arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
