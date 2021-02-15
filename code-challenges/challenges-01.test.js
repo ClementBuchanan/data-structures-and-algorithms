@@ -13,7 +13,7 @@ const greeting = (word) => {
 };
 
 const speaker = (message, callback) => {
-  // Solution code here...
+  return callback.toUppercase();
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,12 +85,12 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   const outputArray = [];
   const fizzcallback = (number, Index, Array) => {
-    if (number % 3 === 0) {
+    if (number % 3 === 0 && number % 5 === 0) {
+      outputArray.push('Fizz Buzz');
+    } else if (number % 3 === 0) {
       outputArray.push('Fizz');
     } else if (number % 5 === 0) {
       outputArray.push('Buzz');
-    } else if () {
-      outputArray.push('Fizz Buzz');
     } else {
       outputArray.push(number);
     }
