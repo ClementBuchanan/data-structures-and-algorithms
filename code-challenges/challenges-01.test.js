@@ -13,7 +13,7 @@ const greeting = (word) => {
 };
 
 const speaker = (message, callback) => {
-  return callback(message);
+  return callback.toUppercase();
 };
 
 /* ------------------------------------------------------------------------------------------------
