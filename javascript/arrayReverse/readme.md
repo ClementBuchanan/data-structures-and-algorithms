@@ -17,3 +17,5 @@ Be careful of empty arrays or arrays with only one number or odd number count or
 
 ## Solution
 ![Whiteboiard](whiteboard.png)
+
+New word
