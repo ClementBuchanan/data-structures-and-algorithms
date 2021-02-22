@@ -5,7 +5,7 @@
 Write a function that reverses an array in place
 
 ## Challenge
-Be careful of empty arraysor arrays with only one number or odd number count or even number count
+Be careful of empty arrays or arrays with only one number or odd number count or even number count
 
 
 ## Approach & Efficiency
