@@ -1,7 +1,7 @@
 'use strict'
 
-const supertest = require('supertest');
-const arrayShift = require('../challenges/javascript/arrayShift/array-shift.js');
+import supertest from 'supertest';
+import arrayShift from '../challenges/javascript/arrayShift/array-shift.js';
 
 describe('array shift', () => {
 
