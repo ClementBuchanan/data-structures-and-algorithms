@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1614030231949" clover="3.2.0">
-  <project timestamp="1614030231949" name="All files">
+<coverage generated="1614062090900" clover="3.2.0">
+  <project timestamp="1614062090900" name="All files">
     <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="12" coveredelements="12" complexity="0" loc="11" ncloc="11" packages="2" files="2" classes="2"/>
     <package name="arrayReverse">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="array-reverse.js" path="/Users/clementbuchanan/Documents/codefellows/401/data-structures-and-algorithms/javascript/arrayReverse/array-reverse.js">
+      <file name="array-reverse.js" path="/Users/clementbuchanan/Documents/codefellows/401/data-structures-and-algorithms/Challenges/javascript/arrayReverse/array-reverse.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -20,7 +20,7 @@
     </package>
     <package name="linked-list">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.js" path="/Users/clementbuchanan/Documents/codefellows/401/data-structures-and-algorithms/javascript/linked-list/index.js">
+      <file name="index.js" path="/Users/clementbuchanan/Documents/codefellows/401/data-structures-and-algorithms/Challenges/javascript/linked-list/index.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="7" count="1" type="stmt"/>
       </file>
