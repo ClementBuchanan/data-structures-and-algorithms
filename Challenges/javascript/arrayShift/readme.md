@@ -14,3 +14,8 @@ Write a function called insertShiftArray which takes in an array and the value t
 ## Link To The Code
 
 [Click here to be taken to the array-shift.js file to see the code](array-shift.js)
+
+## Partner Contributors
+
+- Ann Thorsteinson
+- Jenner Dulce
