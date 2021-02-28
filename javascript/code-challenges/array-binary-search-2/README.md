@@ -14,9 +14,11 @@ To divide the array and search for the key until it is found
 
 ### Links and Resources
 
+- [Link to code for array-binary-search.js](array-binary-search.js)
 - [Array Binary Search in JS](https://youtu.be/92e5Ih4Chbk) (YouTube Video)
 
 
-#### Whiteboard Solution
+### Whiteboard Solution
 
-![Whiteboard Solution](/images/array-Binary-Search.png)
+![Whiteboard Solution](/assets/array-Binary-Search.png)
+
