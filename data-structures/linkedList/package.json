@@ -1,0 +1,14 @@
+{
+  "name": "linkedlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "Jest --coverage"
+  },
+  "author": "Cle,ent Buchanan",
+  "license": "ISC"
+}
