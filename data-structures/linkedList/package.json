@@ -7,8 +7,11 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "Jest --coverage"
+    "test": "jest --coverage --verbose"
   },
-  "author": "Cle,ent Buchanan",
-  "license": "ISC"
+  "author": "Clement Buchanan",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }
