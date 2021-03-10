@@ -1,12 +1,14 @@
 'use strict';
 
-const linkedList = require('./lib/linked-list.js');
+const linkedList = require('./lib/linkedlist.js');
 
-let ll = new linkedList();
+let insert = new linkedList();
 
-ll.append('first');
-ll.append(2);
-ll.append('three');
-ll.append('four');
+insert.insertAtHead(10);
+console.log(insert);
+insert.insertAtHead(20);
+// insert.append('three');
+// insert.append('four');
 
-console.log(ll);
+console.log(insert);
+

@@ -12,11 +12,10 @@ describe('NODE CLASS', () => {
     let val = 'test value';
     let node = new Node(val);
 
-    // expect -> assertions
-
-    // check the node value we just created
+    // expect are assertions
+    // 1. to check the node value we just created
     expect(node.value).toEqual(val);
-    // ensure our next is null, cause there is only one node
+    // 2. ensure our next is null, because there is only one node
     expect(node.next).toBeNull();
   });
 });
