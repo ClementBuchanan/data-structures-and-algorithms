@@ -23,5 +23,46 @@ class LinkedList {
     }
     return this;
   }
+
+  insertAtHead(data) {
+    const newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      let oldHead = this.head;
+      this.head = newNode;
+      this.head.next = oldHead;
+    }
+    return this;
+  }
+
+  includes(value) {
+    // check in linkedlist  is empty
+    if (!this.head) {
+      return false;
+    } else {
+      let current = this.head;
+      while (current) {
+        if (value === current.value) {
+          return true;
+        } else {
+          current = current.next;
+        }
+      }
+      return false;
+    }
+  }
+
+  toString() {
+    let current = this.head;
+    let string = '';
+    while (current) {
+      string += `{${current.value}} -> `;
+      current = current.next;
+    }
+    string += '{null}';
+    return string;
+
+  }
 }
 module.exports = LinkedList;
