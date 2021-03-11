@@ -11,9 +11,9 @@ class LinkedList {
   insertAtHead(data) {
     const newNode = new Node(data);
     if (!this.head) {
-      this.head = newNode
+      this.head = newNode;
     } else {
-      let oldHead = this.head
+      let oldHead = this.head;
       this.head = newNode;
       this.head.next = oldHead;
     }
@@ -47,40 +47,26 @@ class LinkedList {
     string += '{null}';
     return string;
   }
-  
 
-  let newLL = new LinkedList()
-  newLL.insertAtHead(100)
-  newLL.insertAtHead(200)
-  newLL.insertAtHead(300)
-}
-
-module.exports = LinkedList;
-
-
-
-
-
-
-
-insertBefore(value, newVal) {
-  let current = this.head;
-  //need logic for if value to insert before is this.head
-  let newNode = new Node(newVal);
-  while (current.next !== null) {
+  insertBefore(value, newVal) {
+    let current = this.head;
+    //need logic for if value to insert before is this.head
+    let newNode = new Node(newVal);
+    while (current.next !== null) {
     //need conditional for this.head === value
-    if (current.value === value) {
-      newNode.next = current;
-      this.head = newNode;
-    } else if (current.next.value === value) {
-      let temp = current.next;
-      current.next = newNode;
-      newNode.next = temp;
-      // console.log('this is list', this.head);
-      return;
+      if (current.value === value) {
+        newNode.next = current;
+        this.head = newNode;
+      } else if (current.next.value === value) {
+        let temp = current.next;
+        current.next = newNode;
+        newNode.next = temp;
+        return;
+      }
+      current = current.next;
     }
-    current = current.next;
   }
+
 
   insertAfter(value, newVal) {
     let current = this.head;
@@ -95,3 +81,11 @@ insertBefore(value, newVal) {
       current = current.next;
     }
   }
+}
+
+const newLL = new LinkedList();
+newLL.insertAtHead(100);
+newLL.insertAtHead(200);
+newLL.insertAtHead(300);
+
+module.exports = LinkedList;
