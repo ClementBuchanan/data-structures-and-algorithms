@@ -65,28 +65,14 @@ class LinkedList {
 
   }
 
-  kthByRecursion(k) {
+  getByIndex(index) {
+    if (index < 0 || index >= this.length) return null;
     let current = this.head;
-
-    if (this.head === null || k < 1) {
-      return null;
+    for (let i = 0; i < index; i++) {
+      current = current.next;
     }
-    let firstPointer = this.head;
-    let secondPointer = this.head;
-
-    for (let i = 0; i < k; i++) {
-      if (secondPointer === null) {
-        return null;
-      }
-      secondPointer = secondPointer.next;
-    }
-    while (secondPointer.next !== null) {
-      firstPointer = firstPointer.next;
-      secondPointer = secondPointer.next;
-    }
-    console.log('first pointer', firstPointer, 'second pointer', secondPointer);
-    return firstPointer.value;
-  }
-
+    return current;
+  } 
 }
+
 module.exports = LinkedList;

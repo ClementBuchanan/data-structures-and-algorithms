@@ -1,5 +1,6 @@
 'use strict';
 
+const LinkedList = require('../../lib/ll.js');
 const LL = require('../../lib/ll.js');
 
 describe('LINKED LIST', () => {
@@ -35,22 +36,43 @@ describe('LINKED LIST', () => {
     let list = new LL();
     let string1 = 'baldy';
     let string2 = 'baldy2';
-   
+
     list.append(string1);
     list.append(string2);
 
     expect(list.toString()).toEqual('{baldy} -> {baldy2} -> {null}');
-  
+
   });
 
   it('should return true if search value is in the list', () => {
     let list = new LL();
     expect(list.includes('first')).toBeFalsy();
-    
+
     list.append('first');
     list.append('second');
     expect(list.includes('first')).toBeTruthy();
     expect(list.includes('second')).toBeTruthy();
   });
+  
+  it('should return null if kth is less than 0', () => {
+    const ll = LinkedList.fromValues(10, 20);
+    expect(ll.getByIndex(-1)).toBeNull();
+  });
 
+  it('should return null if kth is greater than list length', () => {
+    const ll = LinkedList.fromValues(10, 20);
+    expect(ll.getByIndex(5)).toBeNull();
+  });
+  
+  it('returns the head if kth of 0', () => {
+    const ll = LinkedList.fromValues(10, 20);
+
+    expect(ll.getByIndex(0).value).toBe(10);
+  });
+
+  it('returns kth in the middle', () => {
+    const ll = LinkedList.fromValues(10, 20, 30, 40, 50);
+
+    expect(ll.getByIndex(0).value).toBe(3);
+  });
 });
