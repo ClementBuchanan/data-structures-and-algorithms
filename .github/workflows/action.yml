@@ -1,0 +1,13 @@
+name: 'actions-test'
+description: 'Run jest tests, add status and checks'
+author: 'tangro'
+inputs:
+  command:
+    description: 'The name of the npm script to call. Default is "test"'
+    default: 'test'
+  post-comment:
+    description: 'Set to true to post a comment after the test result has been collected. Default false'
+    default: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
