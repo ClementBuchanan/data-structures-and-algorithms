@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "get-challenge": "`which bash` ./code-challenges/bin/get-challenge.sh",
-    "test": "jest --verbose --coverage",
+    "test": "jest --verbose",
     "lint": "eslint '**/*.js'"
   },
   "author": "",
@@ -17,6 +17,7 @@
     "jest": "^26.0.1",
     "mongoose": "^5.11.18",
     "mustache": "^4.0.1",
+    "node": "^15.10.0",
     "supertest": "^4.0.2"
   }
 }
