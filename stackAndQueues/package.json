@@ -6,7 +6,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --coverage --verbose"
+    "test": "jest --verbose"
   },
   "author": "",
   "license": "ISC",
