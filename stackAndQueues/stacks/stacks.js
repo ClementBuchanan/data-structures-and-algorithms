@@ -6,20 +6,13 @@ class Stack {
   }
 
   pop() {
-    if (!this._size()) {
+    if (!this._size) {
       throw new Error('Stack underflow');
     }
     const result = this.toBePopped.item;
     this.toBePopped = this.toBePopped.nextToBePopped;
     this._size = this._size - 1;
     return result;
-  }
-
-  peek() {
-    if (!this._size()) {
-      throw new Error('Stack underflow');
-    }
-    return this.toBePopped.item;
   }
 
   push(item) {
@@ -35,7 +28,7 @@ class Stack {
   }
 
   isEmpty() {
-    return this._size() === 0;
+    return this._size === 0;
   }
 }
 

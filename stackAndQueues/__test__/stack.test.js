@@ -32,26 +32,6 @@ describe('stack', () => {
   });
 });
 
-describe('peek', () => {
-  it('throws when the stack is empty', () => {
-    const stack = new Stack();
-    expect(() => {
-      stack.peek();
-    }).toThrow(new Error('Stack underflow'));
-  });
-  it('returns the only element in the stack', () => {
-    const stack = new Stack();
-    stack.push(11);
-    expect(stack.peek()).toEqual(11);
-  });
-  it('returns the most recently added element', () => {
-    const stack = new Stack();
-    stack.push(11);
-    stack.push(13);
-    expect(stack.peek()).toEqual(13);
-  });
-});
-
 describe('size', () => {
   it('returns 0 for empty stack', () => {
     const stack = new Stack();
