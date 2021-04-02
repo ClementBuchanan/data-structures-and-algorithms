@@ -1,6 +1,6 @@
 'use strict';
 
-const node = require('..queueWithStacks/node');
+const Node = require('./node.js');
 
 class AnimalShelter {
   constructor() {
@@ -37,10 +37,37 @@ class AnimalShelter {
   dequeueAnimal(pref) {
     if (pref === 'cat' || pref === 'dog') {
       if (pref === 'cat') {
-        if (
+        if (!this.isEmpty()) {
+          if (this.front.value === 'cat') {
+            this.front = this.front.next;
+            return 'Delete a cat';
+          } else {
+            if (pref === 'dog') {
+              if (!this.isEmpty()) {
+                if (this.front.value === 'dog') {
+                  this.front = this.front.next;
+                  return 'Delete a dog';
+                }
+              } else {
+                return 'null';
+              }
+            }
+          }
+        }
       }
     }
   }
-
 }
+
+//enqueue test
+let queue = new AnimalShelter;
+console.log('isEmpty =', queue.isEmpty());
+queue.enqueue('cat');
+queue.enqueue('dog');
+
+//dequeue() test
+console.log(queue.dequeueAnimal());
+
+module.exports = AnimalShelter;
+
 
