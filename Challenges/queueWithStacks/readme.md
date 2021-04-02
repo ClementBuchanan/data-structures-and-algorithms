@@ -2,7 +2,7 @@
 
 # Challenge Summary
 
-Implement a ueue using two stacks
+Implement a queue using two stacks
 
 ## Challenge Description
 
@@ -13,4 +13,4 @@ Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, thi
 
 
 ## Solution
-[Wihteboard](assets/queue-with-stacks.png)
+[Whiteboard](assets/queue-with-stacks.png)

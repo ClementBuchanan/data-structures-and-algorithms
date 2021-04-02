@@ -11,13 +11,13 @@ class Queue {
   }
 
   enqueue(number) {
-    this.stack1[this.head] = number;
+    this.stack1[this.tail] = number;
     this.head++;
   }
 
   dequeue() {
-    let removed = this.storage[this.head];
-    delete this.storage[this.head];
+    let removed = this.stack2[this.head];
+    delete this.stack2[this.head];
     this.head++;
     return removed;
   }

@@ -27,9 +27,9 @@ class Stack {
 
 const stack = new Stack();
 
-stack.push('dog');
-stack.push('cat');
-stack.push('bear');
+stack.push('5');
+stack.push('1');
+stack.push('2');
 
 stack.pop();
 stack.peek();
