@@ -7,14 +7,13 @@ class AnimalShelter {
     this.front = null;
     this.back = null;
   }
-  isEmpty() {
-    return !this.front;
-  }
 
   enqueue(animal) {
     let node = new Node(animal);
-    if (this.isEmpty()) {
-      this.front = this.back = node;
+    if (this.front === null) {
+      this.back = node;
+      this.back.next = node;
+      this.front = node;
     } else {
       this.back.next = node;
       this.back = node;
@@ -25,9 +24,6 @@ class AnimalShelter {
   dequeue() {
     let node = this.front;
     console.log('dequeue', node.value);
-    if (!this.isEmpty()) {
-      this.front = this.front.next;
-    }
     if (!this.front) {
       this.back = null;
     }
@@ -35,39 +31,36 @@ class AnimalShelter {
   }
 
   dequeueAnimal(pref) {
-    if (pref === 'cat' || pref === 'dog') {
-      if (pref === 'cat') {
-        if (!this.isEmpty()) {
-          if (this.front.value === 'cat') {
-            this.front = this.front.next;
-            return 'Delete a cat';
-          } else {
-            if (pref === 'dog') {
-              if (!this.isEmpty()) {
-                if (this.front.value === 'dog') {
-                  this.front = this.front.next;
-                  return 'Delete a dog';
-                }
-              } else {
-                return 'null';
-              }
-            }
-          }
-        }
+    let current = this.front;
+    let previous;
+    if (pref) {
+      if (current.value === pref) {
+        this.front = current.next;
       }
+      while (current.value !== pref) {
+        previous = current;
+        current = current.next;
+      }
+      previous.next = current.next || null;
+      return `${current.value}`;
+    } else {
+      return 'null';
+
     }
   }
 }
 
+
+
 //enqueue test
 let queue = new AnimalShelter;
-console.log('isEmpty =', queue.isEmpty());
 queue.enqueue('cat');
 queue.enqueue('dog');
+queue.enqueue('cat');
+queue.enqueue('dog');
+console.log(queue);
 
 //dequeue() test
 console.log(queue.dequeueAnimal());
-
+console.log(queue);
 module.exports = AnimalShelter;
-
-
