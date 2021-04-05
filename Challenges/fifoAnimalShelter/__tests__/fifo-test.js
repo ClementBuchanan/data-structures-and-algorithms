@@ -15,11 +15,11 @@ describe('enqueue', () => {
     it('Remove first cat', () => {
 
       let queue = new Queue();
-      queue.enqueue('cat');
-      queue.enqueue('dog');
       queue.enqueue('dog');
       queue.enqueue('cat');
-
+      queue.enqueue('dog');
+      queue.enqueue('cat');
+      console.log(queue.dequeueAnimal('cat'));
       expect(queue.dequeueAnimal('cat')).toEqual('cat');
 
     });
@@ -43,8 +43,8 @@ describe('enqueue', () => {
     it('Remove first dog', () => {
 
       let queue = new Queue();
-      queue.enqueue('dog');
       queue.enqueue('cat');
+      queue.enqueue('dog');
       queue.enqueue('dog');
       queue.enqueue('cat');
 

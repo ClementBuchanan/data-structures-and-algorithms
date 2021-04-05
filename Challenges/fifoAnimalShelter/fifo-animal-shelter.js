@@ -21,15 +21,6 @@ class AnimalShelter {
     return this.back.value;
   }
 
-  dequeue() {
-    let node = this.front;
-    console.log('dequeue', node.value);
-    if (!this.front) {
-      this.back = null;
-    }
-    return node.value;
-  }
-
   dequeueAnimal(pref) {
     let current = this.front;
     let previous;
@@ -44,13 +35,11 @@ class AnimalShelter {
       previous.next = current.next || null;
       return `${current.value}`;
     } else {
-      return 'null';
+      return null;
 
     }
   }
 }
-
-
 
 //enqueue test
 let queue = new AnimalShelter;
@@ -58,7 +47,7 @@ queue.enqueue('cat');
 queue.enqueue('dog');
 queue.enqueue('cat');
 queue.enqueue('dog');
-console.log(queue);
+// console.log(queue);
 
 //dequeue() test
 console.log(queue.dequeueAnimal());

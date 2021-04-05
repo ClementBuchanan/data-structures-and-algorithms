@@ -15,7 +15,8 @@ Implement the following methods:
   - If pref is not "dog" or "cat" then return null.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+We used a simple queue and dequeue process vs using an array
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![FIFO Animal Shelter](assets/fifo-animal-shelter.png)
