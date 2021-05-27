@@ -23,4 +23,8 @@ class hashtable {
     let idx = hash(key, this.size);
     this.buckets[idx].set(key, value);
   }
+
+  remove(key) {
+
+  }
 }
