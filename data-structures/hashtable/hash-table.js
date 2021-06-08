@@ -35,7 +35,7 @@ class HashTable {
       sum += keyStr.charCodeAt(i);
 
     // Ensures index is in range of array
-    return sum % this.size
+    return sum % this.size;
   }
 
   getValue(key) {
