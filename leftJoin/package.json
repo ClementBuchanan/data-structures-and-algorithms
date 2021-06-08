@@ -1,0 +1,14 @@
+{
+  "name": "leftjoin",
+  "version": "1.0.0",
+  "description": "<!-- Short summary or background information -->",
+  "main": "left-join.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.0.4"
+  }
+}
