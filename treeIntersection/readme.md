@@ -1,6 +1,8 @@
 ## Challenge Summary
 Find the common values in two binary trees
 
+## Authors: Clement Buchanan & Kale Lesko
+
 ## Whiteboard Process
 ![Tree-Intersection](assets/Tree-Intersection.jpg)
 
