@@ -1,37 +1,24 @@
 'use strict';
 
-function firstRepeating(str) {
-  console.log('word count', str);
-  return str + 'repeating words';
+
+function findDuplicateWords(str) {
+  var max = 0;
+  var maxword = '';
+  var words = str.split(' ');
+  for (let i = 0; i < words.length; i++) {
+    var count = 0;
+    var word = '';
+    for (let j = 0; j < words.length; j++) {
+      if (j !== i && words[i] === words[j]) {
+        count++;
+        word = words[i];
+      }
+    } if (count > maxword) {
+      max = count;
+      maxword = word;
+    }
+  }
+  return maxword;
 }
 
-module.exports = firstRepeating;
-
-// function firstRepeating(str) {
-//   let h = new hashset();
-
-//   for (let i = 0; i <= str.length - 1; i++) {
-//     let c = str[i];
-//     if (h.has(c));
-
-//     return c;
-
-//     else
-//     h.add(c);
-//   }
-//   return '\0';
-
-//   let occurances = {};
-
-//   for (let word of words) {
-//     if (occurances[word]) {
-//       occurances[word]++;
-//     } else {
-//       occurances[word] = 1;
-//     }
-//   }
-
-//   let str = 'everytime I hear the sound, the sound, the sound. The earth moves under my feet';
-//   console.log(firstRepeating(str));
-
-
+module.exports = findDuplicateWords;
