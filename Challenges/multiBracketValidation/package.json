@@ -1,0 +1,14 @@
+{
+  "name": "multibracketvalidation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "multi-bracket-validation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
