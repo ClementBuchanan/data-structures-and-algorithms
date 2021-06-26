@@ -1,11 +1,19 @@
-# Graphs
-<!-- Short summary or background information -->
+# Graph Implementation
+
+# Authors
+
+Kale Lesko & Clement Buchanan
 
 ## Challenge
-<!-- Description of the challenge -->
 
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Implement a graph and represent it as an adjacency list, and should include the following methods:
 
-## API
-<!-- Description of each method publicly available in your Graph -->
+- add node
+- add edge
+- get nodes
+- get neighbors
+- size
+
+## UML
+
+![UML](assets/BFS-Graph.png)
