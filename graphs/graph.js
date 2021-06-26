@@ -1,4 +1,7 @@
-const { serialize } = require("v8");
+"use strict";
+
+const Vertex = require("./vertex");
+const Edge = require("./edge");
 
 class Graph {
   constructor() {
@@ -33,24 +36,28 @@ class Graph {
   addEdge(vertex1, vertex2) {
     this.edges[vertex1].push(vertex2);
     this.edges[vertex2].push(vertex1);
-    this.numberOfEdgess++;
+    this.numberOfEdges++;
   }
 
   //removing edge between two vertices with the removeEdge function
   removeEdge(vertex1, vertex2) {
-
     //finding the index of vertex1 within the edges of vertex2 and if found returns -1
-    const index1 = this.edges[vertex1] ? this.edges[vertex1].indexOf[vertex2] : 1;
-    const index2 = this.edges[vertex2] ? this.edges[vertex2].indexOf[vertex1] : 1;
+    const index1 = this.edges[vertex1]
+      ? this.edges[vertex1].indexOf[vertex2]
+      : 1;
+    const index2 = this.edges[vertex2]
+      ? this.edges[vertex2].indexOf[vertex1]
+      : 1;
 
     if (index1 >= 0) {
       this.edges[vertex1].splice(index1, 1);
-      //placed inside the if statement because potentially the vertex could be empty. 
+      //placed inside the if statement because potentially the vertex could be empty.
       this.numberOfEdges--;
     }
 
     if (index2 >= 0) {
       this.edges[vertex2].splice(index2, 1);
+      this.numberOfEdges--;
     }
   }
 
@@ -61,32 +68,95 @@ class Graph {
 
   //size of the edges
   relations() {
-    this.numberOfEdges;
+    return this.numberOfEdges;
   }
 
-  //print all the vertices within the graph.
-  //Prints all values for the vertex.
-  //Joins all the vertices in the vertex array.
-  //trim white spaces on the side
+  findAdjacent(nodeName) {
+    let adjacentNodes = [];
+
+    this.edges.forEach(function (edge) {
+      if (edge[0] === nodeName) {
+        let node = this.vertices.find(function (vertex) {
+          return vertex.name === edge[1];
+        });
+        if (node) {
+          let adjacentIndex = this.vertices.indexOf(node);
+          let adjacent = this.vertices.splice(adjacentIndex, 1);
+
+          if (adjacent[0].distance === null) {
+            adjacentNodes.push(adjacent[0]);
+          }
+        }
+      } else if (edge[1] === nodeName) {
+        let node = this.vertices.find(function (vertex) {
+          return vertex.name === edge[0];
+        });
+        if (node) {
+          let adjacentIndex = this.vertices.indexOf(node);
+          let adjacent = this.vertices.splice(adjacentIndex, 1);
+
+          if (adjacent[0].distance === null) {
+            adjacentNodes.push(adjacent[0]);
+          }
+        }
+      }
+    });
+    return adjacentNodes;
+  }
+
+  markDistanceAndPredecessor(rootNode, adjacentNodes) {
+    if (rootNode.predecessor === null) {
+      adjacentNodes.forEach(function (node) {
+        node.predecessor = rootNode;
+        node.distance = 1;
+      });
+    } else {
+      adjacentNodes.forEach(function (node) {
+        node.predecessor = rootNode;
+        node.distance = rootNode.distance + 1;
+      });
+    }
+    return adjacentNodes;
+  }
+
+  breathFirstSearch(rootNode) {
+    let queue = [];
+    let visited = [];
+    let explored = [];
+
+    let rootIndex = this.vertices.indexOf(rootNode);
+
+    this.vertices.splice(rootIndex, 1);
+
+    queue.push(rootNode);
+    visited.push(rootNode);
+
+    while (queue.length !== 0) {
+      let currentNode = queue.shift();
+      let adjacentNodesArray = this.findAdjacent(currentNode.name);
+      adjacentNodesArray.forEach(function (node) {
+        queue.push(node);
+        visited.push(node);
+      });
+      this.markDistanceAndPredecessor(currentNode, adjacentNodesArray);
+      explored.push(currentNode);
+    }
+    return visited;
+  }
+
+  markDiscovered(node) {
+    return (node.discovered = true);
+  }
+
   print() {
-    console.log(this.vertices.map(vertex => {
-      return `${vertex} => ${this.edges[vertex].join(', ').trim()}`
-    }, this).join(' | '));
+    console.log(
+      this.vertices
+        .map((vertex) => {
+          return `${vertex} => ${this.edges[vertex].join(", ").trim()}`;
+        }, this)
+        .join(" | ")
+    );
   }
 }
 
-(function test() {
-  let graph = new Graph();
-  graph.addVertex('Node1');
-  graph.addVertex('Node2');
-  graph.addVertex('Node3');
-  graph.addVertex('Node4');
-
-  graph.addEdge('Node1', 'Node2');
-  graph.addEdge('Node1', 'Node3');
-  graph.addEdge('Node2', 'Node3');
-
-  // graph.removeVertex('Node4');
-
-  graph.print();
-})();
+module.exports = Graph;
