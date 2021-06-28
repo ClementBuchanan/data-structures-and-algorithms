@@ -1,10 +1,11 @@
-'use strict';
 
-const BinarySearchTree = require('../modules/bst.js');
-const BinaryTree = require('../tree.js');
+"use strict";
 
-describe('binaryTree test', () => {
-  it('should return the values in pre-order', () => {
+const BinarySearchTree = require("../modules/bst.js");
+const BinaryTree = require("../tree.js");
+
+describe("binaryTree test", () => {
+  it("should return the values in pre-order", () => {
 
     const binaryTree = new BinaryTree();
     binaryTree.insertNode(10);
@@ -18,7 +19,7 @@ describe('binaryTree test', () => {
 
   });
 
-  it('should return the values in post-order', () => {
+  it("should return the values in post-order", () => {
 
     const binaryTree = new BinaryTree();
     binaryTree.insertNode(10);
@@ -32,7 +33,7 @@ describe('binaryTree test', () => {
 
   });
 
-  it('should return the values in in-order', () => {
+  it("should return the values in in-order", () => {
 
     const binaryTree = new BinaryTree();
     binaryTree.insertNode(10);
@@ -47,8 +48,11 @@ describe('binaryTree test', () => {
   });
 });
 
-describe('BinarySearchTree test', () => {
-  it('should find the max value', () => {
+describe("BinarySearchTree test", () => {
+  it("should find the max value", () => {
+
+  });
+});
 
     const binarySearchTree = new BinarySearchTree();
 

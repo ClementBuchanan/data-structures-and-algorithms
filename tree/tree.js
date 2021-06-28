@@ -1,8 +1,7 @@
-'use strict';
 
+"use strict";
 
 class BinaryTree {
-
   constructor() {
     this.root = null;
   }
@@ -11,7 +10,7 @@ class BinaryTree {
     const node = {
       value: val,
       left: null,
-      right: null
+      right: null,
     };
 
     let currentNode;
@@ -42,14 +41,17 @@ class BinaryTree {
     }
   }
 
-  // depth first search algorythm - branch by branch. 
+
+  // depth first search algorythm - branch by branch.
   //in-order. Process left node -> root node -> right node
   //breath first search - level by level
   //use a queue
   InOrder() {
     let result = [];
 
-    const traverse = node => {
+
+    const traverse = (node) => {
+
       // if left child exists, go left
       if (node.left) traverse(node.left);
       result.push(node.value);
@@ -65,7 +67,9 @@ class BinaryTree {
   PreOrder() {
     let result = [];
 
-    const traverse = node => {
+
+    const traverse = (node) => {
+
       result.push(node.value);
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
@@ -75,11 +79,12 @@ class BinaryTree {
     return result;
   }
 
+
   //post-order. Process left node -> right node -> root node
   PostOrder() {
     let result = [];
 
-    const traverse = node => {
+    const traverse = (node) => {
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
       result.push(node.value);
