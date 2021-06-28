@@ -1,0 +1,14 @@
+{
+  "name": "tree",
+  "version": "1.0.0",
+  "description": "Creating a Binary Tree and a Binary Search Tree implementation",
+  "main": "tree.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.5"
+  }
+}
