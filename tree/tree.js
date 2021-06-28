@@ -1,3 +1,4 @@
+
 "use strict";
 
 class BinaryTree {
@@ -40,6 +41,7 @@ class BinaryTree {
     }
   }
 
+
   // depth first search algorythm - branch by branch.
   //in-order. Process left node -> root node -> right node
   //breath first search - level by level
@@ -47,7 +49,9 @@ class BinaryTree {
   InOrder() {
     let result = [];
 
+
     const traverse = (node) => {
+
       // if left child exists, go left
       if (node.left) traverse(node.left);
       result.push(node.value);
@@ -63,7 +67,9 @@ class BinaryTree {
   PreOrder() {
     let result = [];
 
+
     const traverse = (node) => {
+
       result.push(node.value);
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
@@ -72,6 +78,7 @@ class BinaryTree {
 
     return result;
   }
+
 
   //post-order. Process left node -> right node -> root node
   PostOrder() {
@@ -105,3 +112,4 @@ class BinaryTree {
 }
 
 module.exports = BinaryTree;
+

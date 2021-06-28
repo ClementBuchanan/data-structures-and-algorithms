@@ -1,3 +1,4 @@
+
 "use strict";
 
 const Node = require("./node.js");
@@ -45,6 +46,8 @@ class BST {
         }
       }
       //if there is a right child node. Call searchTree and look right again.
+
+
     };
     searchTree(this.root);
     //while inside the insert method call searchTree in the root node
@@ -54,7 +57,8 @@ class BST {
   contains(value) {
     // let currentNode = this.root;
 
-    const traverse = (node) => {
+    const traverse = node => {
+
       if (!node) return false;
       if (node.value === value) return true;
 
